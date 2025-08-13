@@ -3,7 +3,7 @@ on: push
 env: # Set the secret as an input
   docker_username: $MichelleNygaard 
   docker_password: ${{ secrets.GITHUB_TOKEN }} #Nees to be set to be made available to the workflow
-  GIT_COMMIT: ${{76320d61212ba54597bfc93c02ffb369d2355d02}}
+  GIT_COMMIT: ${{github.workflow_sha}}
 jobs:
   Build:
     runs-on: ubuntu-latest
